@@ -24,3 +24,5 @@ docker push israeldoamaral/api-produto:v1
 docker tag israeldoamaral/api-produto:v1 israeldoamaral/api-produto:latest
 
 docker push israeldoamaral/api-produto:latest
+
+docker container run -d -p 8080:8080 --network produto_net -e MONGODB_URI=mongodb://mongouser:mongopwd@mongodb:27017/admin israeldoamaral/api-produto:v1
